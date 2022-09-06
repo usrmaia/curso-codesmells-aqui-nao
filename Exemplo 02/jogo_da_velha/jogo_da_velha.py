@@ -31,6 +31,7 @@ def getInputValido(mensagem):
 
 
 def verificaMovimento(board, i , j):
+    # validaMovimento
     if(board[i][j] == branco):
         return True
     else:
@@ -38,6 +39,7 @@ def verificaMovimento(board, i , j):
 
 
 def fazMovimento(board, i, j, jogador):
+    #preencheBoadr
     board[i][j] = token[jogador]
 
 
@@ -60,6 +62,7 @@ def verificaGanhador(board):
     if(board[0][2] != branco and board[0][2] == board[1][1] and board[1][1] == board[2][0]):
         return board[0][2]
 
+    # não houve ganhador
     for i in range(3):
         for j in range(3):
             if(board[i][j] == branco):
