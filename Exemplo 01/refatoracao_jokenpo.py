@@ -72,12 +72,11 @@ def jokenpo():
     maquina = random.choice(jogadas)
     compara_jogadas(escolha, maquina)
 
-    # jogar novamente    
-    continuar = ' '
-    estado = continuar != 'sim' and continuar != 's' and continuar != 'n' and continuar != 'não' and continuar != 'nao'
-    while estado:
-        continuar = str(input('Deseja continuar? [S/N]: ')).lower().strip()
-        if continuar == 'sim' or continuar == 's':
+    # jogar novamente  
+    estado = " "
+    while estado != 'sim' and estado != 's' and estado != 'n' and estado != 'não' and estado != 'nao':
+        estado = str(input('Deseja continuar? [S/N]: ')).lower().strip()
+        if estado == 'sim' or estado == 's':
             jokenpo()
         else:
             break
